@@ -1,0 +1,58 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu li{
+	display: inline-block;
+    
+}
+
+ul.menu {
+float: right;
+padding-right: 270px;
+padding-top: 45px;
+}
+
+ul.menu li a {
+	padding-right: 60px;
+    color: white;
+	text-decoration: none;
+}
+
+.menubar {
+	background-color: grey;
+}
+
+.header {
+	background-color: darkslateblue;
+	height: 200px;
+    
+}
+
+.logo_text {
+    padding: 60px 0 0 330px;
+    
+}
+
+.sidebar_container {
+	float: right;
+	width: 224px;
+}
+
+.sidebar {
+	width: 180px;
+	padding: 5%;
+	margin: 0 0 15px 0;
+	background-color: #f9f9f9;
+	border: solid 5px #f2f2f2;
+	border-radius: 8px;
+}
+
+.site_content {
+	margin: 20px auto 0 auto;
+	width: 880px;
+	overflow: hidden;
+	background-color: white;
+}
+

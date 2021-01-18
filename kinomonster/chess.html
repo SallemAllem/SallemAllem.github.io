@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+
+	body {
+
+  background-color: grey;
+
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+	background-color: white;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+	display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+span:nth-child(even) div:nth-child(even) {
+	background: white;
+}
+
+span:nth-child(even) div:nth-child(odd) {
+	background: black;
+}
+
+span:nth-child(odd) div:nth-child(odd) {
+	background: white;
+}
+
+span:nth-child(odd) div:nth-child(even) {
+	background: black;
+}
+
+/*
+div:nth-child(even) {background: white}
+div:nth-child(odd) {background: black}
+*/
+</style>
+</head>
+<body>
+
+<span>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+</span>
+
+<span>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+</span>
+
+<span>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+</span>
+
+<span>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+</span>
+
+<span>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+</span>
+
+<span>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+</span>
+
+<span>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+</span>
+
+<span>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+</span>
+
+</body>
+</html>
