@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCANDI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header_top" id="header_top">
+            <div class="logo">
+                <img src="img/logo.svg" alt="">SCANDI
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav_link" data-scroll="#about">О компании</a>
+                <a href="#" class="nav_link" data-scroll="#portfolio">Портфолио</a>
+                <a href="#" class="nav_link" data-scroll="#team">Команда</a>
+                <a href="#" class="nav_link" data-scroll="#process">Как мы работаем</a>
+                <a href="#" class="nav_link" data-scroll="#reviews">Отзывы клиентов</a>
+                <a href="#" class="nav_link" data-scroll="#apply">Оставить заявку</a>
+            </nav>
+            <div class="tel">
+                +7 (981) 857-46-24
+            </div>
+        </div>
+        <div class="header_text">
+            <div class="header_item"><h1>Поможем сделать вашу квартиру уютнее</h1></div>
+            <div class="header_item">Подбираем текстиль, мебель и аксессуары
+под ваш интерьер, находим магазины
+и помогаем организовать доставку </div>
+            <div class="header_item"><a href="" class="apply_btn" data-scroll="#apply">Оставить заявку</a></div>
+        </div>     
+    </header>
+    
+<!--======
+   about
+   ======-->
+    <section class="about" id="about">
+        <h1>О НАС</h1>
+        <div class="about_items">
+            <div class="about_item_left">
+                <img src="img/about.png" alt="">
+            </div>
+            <div class="about_item_right">
+                Премиальный европейский текстиль — одно из самых главных направлений работы коллектива. Создавать неповторимые интерьеры для наших дорогих клиентов, уделяя внимание мельчайшим деталям — вот то,  что по-настоящему вдохновляет дизайнеров нашей студии.<br><br>Наш коллектив сделает все, чтобы после сотрудничества с нами,  Вам было приятно сказать:
+«Да! Это именно то, что действительно достойно моего дома!»
+            </div>
+        </div>
+    </section><!--    about-->
+    
+    <!--======
+   exp
+   ======-->
+    <section class="exp">
+        <div><h1>5</h1><h2>ЛЕТ ОПЫТА</h2></div>
+        <div><h1>100</h1><h2>ПРОЕКТОВ</h2></div>
+        <div><h1>10</h1><h2>НАГРАД</h2></div>
+    </section>
+    
+    <!--======
+   portfolio
+   ======-->
+    <section class="portfolio" id="portfolio">
+        <h1 class="portfolio_title">НАШИ РАБОТЫ</h1>
+        <div class="works">
+            <div class="works__item works__item1">
+               <img src="img/portfolio_item1.jpg" alt="" class="works__photo">
+               <div class="works__content">
+                   <div class="works__title">Квартира-студия 30 кв.м.</div>
+                   <div class="works__text">В квартире были светлые стены и тёплые цвета. Мы сконцентрировались
+на отсылках к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</div>
+               </div>
+           </div>
+           <div class="works__item works__item2">
+                <img class="works__photo" src="img/portfolio_item2.jpg" alt="">
+                <div class="works__content">
+                    <div class="works__title">Квартира-студия 30 кв.м.</div>
+                   <div class="works__text">В квартире были светлые стены и тёплые цвета. Мы сконцентрировались
+на отсылках к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</div>
+                </div>
+            </div>
+
+            <div class="works__item works__item3">
+                <img class="works__photo" src="img/portfolio_item3.jpg" alt="">
+                <div class="works__content">
+                    <div class="works__title">Квартира-студия 30 кв.м.</div>
+                   <div class="works__text">В квартире были светлые стены и тёплые цвета. Мы сконцентрировались
+на отсылках к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</div>
+                </div>
+            </div>
+
+            <div class="works__item works__item4">
+                <img class="works__photo" src="img/portfolio_item4.jpg" alt="">
+                <div class="works__content">
+                    <div class="works__title">Квартира-студия 30 кв.м.</div>
+                   <div class="works__text">В квартире были светлые стены и тёплые цвета. Мы сконцентрировались
+на отсылках к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</div>
+                </div>
+            </div>
+        </div><!--  works      -->
+        <a href="#" class="more_works"><h2 class="more_works">Смотреть еще <img src="img/Arrow_more.svg" alt=""></h2></a>
+    </section><!-- portfolio      -->
+    
+    <!--======
+   team
+   ======-->
+   <section class="team" id="team">
+       <h1>КОМАНДА</h1>
+       <div class="team_container">
+           <div class="team_member team_member1">
+               <img src="img/member1.jpg" alt="">
+               <div>Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект, приезжает к вам домой, общается
+и помогает сделать вашу квартиру красивой и уютной.</div>
+               
+           </div>
+           <div class="team_member team_member2">
+               <img src="img/member2.jpg" alt="">
+               <div>С нашим менеджером Сашей вы познакомитесь в первую очередь. Она проконсультирует вас, соберёт все документы
+и ответит на все вопросы.</div>
+               
+           </div>
+           <div class="team_member team_member3">
+               <img src="img/member3.jpg" alt="">
+               <div>Катя тоже занимается дизайном.
+Она всегда находит общий язык
+с клиентами и точно знает,
+как обсутроить дом так, чтобы вам понравилось.</div>
+               
+           </div>
+       </div>
+       <div class="process" id="process">
+           <h1>КАК МЫ РАБОТАЕМ</h1>
+           <div class="process_container">
+               <div class="process_item">
+                   <div class="process_number"><h2>1</h2></div>
+                   <div class="process_text">Знакомимся, выезжаем
+на объект, утверждаем концепцию, подписывем договор.</div>
+               </div>
+               <div class="process_item">
+                   <div class="process_number"><h2>2</h2></div>
+                   <div class="process_text">Подбираем мебель, текстиль, аксессуры. Делаем 3D-
+зуализацию.</div>
+               </div>
+               <div class="process_item">
+                   <div class="process_number"><h2>3</h2></div>
+                   <div class="process_text">Находим нужные магазины, помогаем с доставкой
+и оплатой товаров.</div>
+               </div>
+               <div class="process_item">
+                   <div class="process_number"><h2>4</h2></div>
+                   <div class="process_text">Воплощаем проект в жизнь:
+расставляем мебель и цветы, вешаем шторы, находим места для мелочей</div>
+               </div>
+           </div>
+       </div><!--       process-->
+   </section><!--    team-->
+   
+   
+  <!--======
+   reviews
+   ======-->
+    <section class="reviews" id="reviews">
+        <h1>ОТЗЫВЫ</h1>
+        <div class="reviews_container">
+            <div class="reviews_arrow">
+                <a href=""><img src="img/review-left-arrow.png" alt=""></a>
+            </div>
+            <div class="reviews_text">
+                «Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу студию для украшения своего дома. <br> <br>
+
+Работа шла быстро, было очень приятно общаться и взаимодествовайть
+с сотрудниками. Не ожидала, что это будет так легко! <br> <br>
+
+Буду советовать и своим друзьям к вам обращаться!»
+            </div>
+            <div class="reviews_photo">
+                <img src="img/review-photo1.jpg" alt="">
+                <img src="img/review-photo2.jpg" alt="">
+            </div>
+            <div class="reviews_arrow arrow_right">
+                <a href=""><img src="img/review-right-arrow.png" alt=""></a>
+            </div>
+        </div>
+    </section><!--       reviews-->
+       
+ <!--======
+   application
+   ======-->
+   <section class="application_section" id="apply">
+       <div class="application_container application_container_left">
+           <h1>ОСТАВИТЬ ЗАЯВКУ</h1>
+           <p>Оставьте свои контакты. Менеджер перезвонит
+в удобное вам время и ответит на все вопросы.</p>
+      <form>
+    
+    <div class="group">      
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Ваше имя</label>
+    </div>
+      
+    <div class="group">      
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Введите телефон</label>
+    </div>
+    
+  </form>
+      <a href="" class="apply_btn">Оставить заявку</a>
+       </div>
+       <div class="application_container">
+           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9ea804807bebe9775545091e27942e5d372589118eebbfc1e52410d59d1d34d3&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+       </div>
+   </section><!--   application_section-->
+   
+    <!--======
+   footer
+   ======-->
+   <footer class="footer">
+       <div class="footer_block">
+           +7 (981) 857-46-24 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   г. Санкт-петербург, ул. Большая Конюшенная, 19
+       </div>
+       <div class="footer_block">
+           ИП Королёва А.А.
+       </div>
+   </footer>
+   
+   <!-- Javascript -->
+<script src="app.js"></script>
+   
+</body>
+</html>
