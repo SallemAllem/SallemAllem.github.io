@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="container">
+      <header class="header">
+        <svg height="15px" id="Layer_1" style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128"
+          width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g>
+            <g>
+              <line style="fill:none;stroke:#d85943;stroke-width:12;stroke-linecap:square;stroke-miterlimit:10;"
+                x1="57.12" x2="17.787" y1="103.334" y2="64" />
+              <line style="fill:none;stroke:#d85943;stroke-width:12;stroke-linecap:square;stroke-miterlimit:10;"
+                x1="17.787" x2="57.12" y1="64" y2="24.666" />
+            </g>
+            <line style="fill:none;stroke:#d85943;stroke-width:12;stroke-miterlimit:10;" x1="17.787" x2="118.213"
+              y1="64" y2="64" />
+          </g>
+        </svg>
+
+        <div class="header-content">
+          <span class="header-span">ASHYQ.</span>
+          <span class="header-text">Статус по коронав...</span>
+        </div>
+      </header>
+    </div>
+
+    <div class="top-page">
+      <div class="container">
+      <h1 class="top-title" id="blink2">Безопасный</h1>
+      <div class="top-aside">
+        <p>
+          Не имеет ограничений, вакцинирован, переболевший или ПЦР-тест отрицательный.
+        </p>
+        <p>
+          Срок действия статуса: до 20.09.2022
+        </p>
+      </div>
+
+      </div>
+
+    </div>
+    <div class="content">
+      <div id="min">4</div>:
+      <div id="sec">59</div>,
+      <div id="msec" style="font-weight: 100;">9</div>
+    </div>
+
+    <form class="box">
+      <label class="box-label label-item">
+        <span class="box-span">ИИН</span>
+        <input class="input-num" type="number" placeholder="990724351505" disabled>
+      </label>
+      <label class="box-label">
+        <span class="box-span">ИИН/БИН организации</span>
+        <input class="input-num" type="number" placeholder="000000000010" disabled>
+      </label>
+    </form>
+  </div>
+
+    <footer class="footer">
+      <div class="container">
+        <button class="button">вернуться на главную kaspi.kz</button>
+      </div>
+    </footer>
+
+<script>
+  function min() {
+  let p = document.getElementById("min");
+let text = p.textContent;
+let number = Number(text);
+  if (number === -1) {
+    number = 5
+  }
+  document.getElementById("min")
+  .innerHTML = number - 1
+}
+function sec() {
+  let p = document.getElementById("sec");
+let text = p.textContent;
+let number = Number(text);
+  if (number === 0) {
+    number = 60
+  }
+  document.getElementById("sec")
+  .innerHTML = number - 1
+}
+function msec() {
+  let p = document.getElementById("msec");
+let text = p.textContent;
+let number = Number(text);
+  if (number === 0) {
+    number = 10
+  }
+  document.getElementById("msec")
+  .innerHTML = number - 1
+}
+setInterval(min, 60000);
+setInterval(sec, 1000);
+setInterval(msec, 100);
+</script>
+
+</body>
+
+</html>
