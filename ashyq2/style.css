@@ -122,7 +122,7 @@ body{
 .content{
   padding: 10px 0 20px 0;
   border-bottom: 5px solid #ededed;
-  display: flex;
+  
   padding-left: 10px;
 }
 .content-text{
@@ -132,6 +132,9 @@ body{
   color: rgb(67, 62, 62);
   margin-bottom: 10px;
   padding: 0 0 0 10px;
+}
+.clock {
+  display: flex;
 }
 
 
