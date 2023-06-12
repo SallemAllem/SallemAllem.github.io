@@ -15,6 +15,39 @@ body {
     padding-bottom: 300px;
 }
 
+.navdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 50%;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 5px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 h1 {
     font-size: 2.2em;
 }
