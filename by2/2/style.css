@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
-@import url('flip.css');
+@import url('./flip.css');
 
 header {
     background: rgb(180, 180, 180);
