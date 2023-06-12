@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+@import url('./flip.css');
+
+header {
+    background: rgb(180, 180, 180);
+    padding: 15px 0;
+}
+
+.card-content {
+    padding: 10 30 10 30px;
+    /* gap: 5px; */
+    /* height: 40px; */
+    width: 100%;
+    display: flex;
+    /* Add flexbox properties */
+    justify-content: center;
+    /* Center the child horizontally */
+    align-items: center;
+    flex-direction: column;
+}
+
+.flip {
+    width: 100%;
+}
+
+.card {
+    margin: 15px 0;
+    cursor: pointer;
+    width: 50%;
+}
+
+.arfont {
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 25px;
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust the max-width breakpoint as needed */
+    .card {
+        width: 90%;
+        /* Set the width to 90% on mobile devices and tablets */
+    }
+}
