@@ -1,0 +1,67 @@
+body {
+    color: #555;
+    background: #222;
+    text-align: center;
+    font-family: 'Roboto Mono';
+    padding-bottom: 300px;
+}
+
+
+.card-content {
+    padding: 10 30 10 30px;
+    /* gap: 5px; */
+    /* height: 40px; */
+    width: 100%;
+    display: flex;
+    /* Add flexbox properties */
+    justify-content: center;
+    /* Center the child horizontally */
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px 0;
+    cursor: pointer;
+    width: 80%;
+}
+
+.buttons {
+    cursor: pointer;
+    width: 100%;
+}
+
+.buttons_style {
+    background-color: #333; /* Цвет фона кнопки */
+  color: rgba(218, 215, 177, 0.8); /* Цвет текста */
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  border: none; /* Убираем границу */
+  border-radius: 5px; /* Закругленные углы */
+  font-size: 16px; /* Размер текста */
+  cursor: pointer; /* Изменение курсора при наведении */
+}
+.buttons_style:hover {
+    background-color: #555; /* Цвет фона кнопки при наведении */
+}
+
+.arfont {
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 25px;
+    margin: 15px 0;
+    cursor: pointer;
+    width: 100%;
+    color: rgba(205, 198, 60, 0.8);
+}
+
+.rusfont {
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 25px;
+    margin: 15px 0;
+    cursor: pointer;
+    width: 100%;
+    color: rgba(218, 215, 177, 0.8);
+}
