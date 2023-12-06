@@ -4,6 +4,7 @@ const cardContent = document.querySelector('.card-content')
 
 let cardContentValue = "";
 let cardID = 0
+let buttonID = 0
 
 data.sort((a, b) => a.id - b.id)
 
@@ -24,10 +25,10 @@ data.forEach(card => {
 
             <div class="buttons">
             <button class="buttons_style" onclick="hideText(${cardID})">скрыть текст</button>
-    <button class="buttons_style" onclick="revealLetter(${cardID})">открыть букву</button>
-    <button class="buttons_style" onclick="revealWord(${cardID})">открыть слово</button>
-    <button class="buttons_style" onclick="revealAll(${cardID})">открыть всё</button>
-    <button class="buttons_style" onclick="reset(${cardID})">сброс</button>
+    <button id="id${buttonID}" class="buttons_style" onclick="revealLetter(${cardID})" disabled>открыть букву</button>
+    <button id="id${buttonID}" class="buttons_style" onclick="revealWord(${cardID})" disabled>открыть слово</button>
+    <button id="id${buttonID}" class="buttons_style" onclick="revealAll(${cardID})" disabled>открыть всё</button>
+    <button id="id${buttonID}" class="buttons_style" onclick="reset(${cardID})" disabled>сброс</button>
             </div>
 
             
@@ -36,6 +37,7 @@ data.forEach(card => {
     </div>
 `
 cardID++
+buttonID++
 })
 
 cardContent.innerHTML = cardContentValue
