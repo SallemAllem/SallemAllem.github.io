@@ -24,11 +24,10 @@ data.forEach(card => {
             </div>
 
             <div class="buttons">
-            <button class="buttons_style" onclick="hideText(${cardID})">скрыть текст</button>
+            <button id="idHide${buttonID}" class="buttons_style" onclick="hideText(${cardID})">скрыть текст</button>
     <button id="id${buttonID}" class="buttons_style" onclick="revealLetter(${cardID})" disabled>открыть букву</button>
     <button id="id${buttonID}" class="buttons_style" onclick="revealWord(${cardID})" disabled>открыть слово</button>
     <button id="id${buttonID}" class="buttons_style" onclick="revealAll(${cardID})" disabled>открыть всё</button>
-    <button id="id${buttonID}" class="buttons_style" onclick="reset(${cardID})" disabled>сброс</button>
             </div>
 
             
