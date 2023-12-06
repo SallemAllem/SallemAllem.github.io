@@ -47,6 +47,11 @@ body {
 .buttons_style:hover {
     background-color: #555; /* Цвет фона кнопки при наведении */
 }
+.buttons_style:disabled {
+    opacity: 0.5; /* Уменьшение прозрачности для обозначения неактивного состояния */
+    cursor: not-allowed; /* Изменение курсора на "недоступный" */
+    /* Дополнительные стили, если нужно */
+  }
 
 .arfont {
     font-family: 'Noto Naskh Arabic', serif;
