@@ -16,6 +16,15 @@ window.onload = function() {
   };
 
 function hideText(n) {
+  const buttons = document.querySelectorAll(`#id${n}`);
+
+// Преобразуем полученные элементы в массив и делаем их активными
+buttons.forEach(button => {
+    button.disabled = false; // Делаем кнопку активной
+    // Можно также добавить другие операции с кнопками здесь, если нужно
+});
+
+
   text = document.getElementById(n).innerText.split(" "); // Сохранение текста при загрузке страницы
     textReset = document.getElementById(n).innerText; // Сохранение текста при загрузке страницы
     text2 = document.getElementById(n).innerText.split(" "); // Сохранение текста при загрузке страницы
