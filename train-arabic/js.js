@@ -17,6 +17,11 @@ window.onload = function() {
 
 function hideText(n) {
   const buttons = document.querySelectorAll(`#id${n}`);
+  hideButton = document.querySelectorAll(`#idHide${n}`);
+  hideButton.forEach(button => {
+    button.disabled = true; // Делаем кнопку активной
+    // Можно также добавить другие операции с кнопками здесь, если нужно
+});
 
 // Преобразуем полученные элементы в массив и делаем их активными
 buttons.forEach(button => {
@@ -60,16 +65,25 @@ function revealLetter(n) {
       document.getElementById(n).innerText += currWord[0]
       text.shift()
       currWord = text[0]
+      if (text.length == 0) {
+        revealAll(n)
+      }
       return
     }
     if (withSpace) {
       withSpace = false
       document.getElementById(n).innerText += " " + currWord[0]
       currWord = currWord.substring(1)
+      if (text.length == 0) {
+        revealAll(n)
+      }
       return
     } else {
       document.getElementById(n).innerText += currWord[0]
       currWord = currWord.substring(1)
+      if (text.length == 0) {
+        revealAll(n)
+      }
       return
     }
     
@@ -81,6 +95,9 @@ function revealWord(n) {
     document.getElementById(n).innerText += currWord
     text.shift()
     currWord = text[0]
+    if (text.length == 0) {
+      revealAll(n)
+    }
     return
   }
   if (withSpace) {
@@ -88,12 +105,18 @@ function revealWord(n) {
     document.getElementById(n).innerText += " " + currWord
     text.shift()
     currWord = text[0]
+    if (text.length == 0) {
+      revealAll(n)
+    }
     return
   } else {
     withSpace = true
     document.getElementById(n).innerText += currWord
     text.shift()
     currWord = text[0]
+    if (text.length == 0) {
+      revealAll(n)
+    }
     return
   }
 }
@@ -107,4 +130,17 @@ function revealAll(n) {
   currIndex = 0;
   lettersCount = 0;
   withSpace = false;
+
+  const buttons = document.querySelectorAll(`#id${n}`);
+  hideButton = document.querySelectorAll(`#idHide${n}`);
+  hideButton.forEach(button => {
+    button.disabled = false; // Делаем кнопку активной
+    // Можно также добавить другие операции с кнопками здесь, если нужно
+});
+
+// Преобразуем полученные элементы в массив и делаем их активными
+buttons.forEach(button => {
+    button.disabled = true; // Делаем кнопку активной
+    // Можно также добавить другие операции с кнопками здесь, если нужно
+});
 }
