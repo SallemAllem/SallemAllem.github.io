@@ -6,6 +6,26 @@ body {
     padding-bottom: 300px;
 }
 
+h1 {
+    color: rgba(118, 115, 47, 0.8);
+}
+
+/* Базовый стиль для ссылок */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgba(205, 198, 60, 0.8);
+    background-color: #333; /* Цвет фона ссылки */
+    border-radius: 5px; /* Закругление углов */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавное изменение цветов при наведении */
+  }
+  
+  /* Стиль ссылки при наведении */
+  a:hover {
+    background-color: #555; /* Новый цвет фона при наведении */
+  }
+
 
 .card-content {
     padding: 10 30 10 30px;
