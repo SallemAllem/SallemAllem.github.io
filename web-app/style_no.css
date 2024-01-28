@@ -1,0 +1,182 @@
+/* Определение основных цветов для светлой и темной темы */
+html {
+    --primary-color: #4CAF50; /* Основной цвет для интерактивных элементов */
+    --secondary-color: #ccc; /* Вторичный цвет для границ и фона */
+    --text-color: #212121;
+    --background-color: #ffffff;
+    --modal-background: rgba(0,0,0,0.4);
+    --input-background: #f8f8f8;
+    --hover-background: white;
+    --hover-text: black;
+    --hover-border: #4CAF50;
+}
+
+/* Стили для темной темы */
+@media (prefers-color-scheme: dark) {
+    html {
+        --text-color: #ffffff;
+        --background-color: #212121;
+        --modal-background: rgba(255,255,255,0.4);
+        --input-background: #333;
+        --hover-background: #2a2a2a;
+        --hover-text: white;
+        --hover-border: #66bb6a;
+    }
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    /* Другие стили для body */
+}
+
+input[type="text"], .brandName {
+    /* Общие стили для текстовых полей */
+    background-color: var(--input-background);
+    border: 2px solid var(--secondary-color);
+    /* Другие стили */
+}
+
+input[type="text"]:focus, .brandName:focus {
+    /* Стили для активного состояния полей ввода */
+    background-color: var(--hover-background);
+    border-color: var(--primary-color);
+}
+
+.deliveryClass, .deliveryClass:hover {
+    /* Стили для кнопок и их состояний при наведении */
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 2px solid transparent;
+    /* Другие стили */
+}
+
+.deliveryClass:hover {
+    background-color: var(--hover-background);
+    color: var(--hover-text);
+    border-color: var(--hover-border);
+}
+
+#myModal {
+    /* Стили для модального окна */
+    background-color: var(--modal-background);
+    /* Другие стили */
+}
+
+/* Добавьте другие стили, например, для .container, .container2 и т.д. */
+/* Общие стили для контейнеров */
+.container, .container2 {
+    width: 100%; /* Адаптивный размер для мобильных устройств */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}
+
+/* Стили для раздела продуктов */
+.prodType, .prodPodType, .products {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Стили для отдельного продукта */
+.product {
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: calc(100% - 20px); /* Адаптивная ширина с учетом отступов */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05); /* Небольшое увеличение при наведении */
+}
+
+/* Стили для изображений внутри продукта */
+img {
+    max-width: 100%; /* Адаптивная ширина изображения */
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Стили для элементов выбора количества */
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type="number"] {
+    width: 50px; /* Фиксированная ширина для поля количества */
+    padding: 5px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    background-color: var(--input-background);
+    color: var(--text-color);
+}
+
+/* Стили для кнопок доставки */
+.deliveryClass {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.deliveryClass:hover {
+    background-color: var(--hover-background);
+    color: var(--hover-text);
+    border: 2px solid var(--hover-border);
+}
+
+/* Стили для модального окна */
+#myModal {
+    display: none; /* Изначально скрыто */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-background);
+}
+
+#modalContent {
+    background-color: var(--background-color);
+    margin: 5% auto; /* Центрирование модального окна */
+    padding: 20px;
+    border: 1px solid var(--secondary-color);
+    width: 90%; /* Адаптивная ширина */
+    max-width: 600px; /* Максимальная ширина для больших экранов */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+/* Дополнительные стили для адаптивности и улучшенной визуализации */
+@media screen and (min-width: 600px) {
+    .prodPodType {
+        flex-direction: row; /* Горизонтальное расположение продуктов на больших экранах */
+        justify-content: space-around;
+    }
+
+    .product {
+        width: calc(50% - 20px); /* Половина ширины экрана для каждого продукта */
+    }
+
+    .container, .container2 {
+        width: 50%; /* Уменьшение ширины контейнеров на больших экранах */
+    }
+}
+
+/* Другие медиа-запросы и стили для различных размеров устройств могут быть добавлены здесь */

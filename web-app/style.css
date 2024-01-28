@@ -1,4 +1,22 @@
+/* Определение цветов для светлой темы */
+html {
+    --color-background: #f0f0f0;
+    --color-text: #333333;
+    /* Добавьте здесь другие переменные цвета */
+  }
+  
+  /* Изменение цветов для темной темы */
+@media (prefers-color-scheme: dark) {
+    html {
+      --color-background: #f0f0f0;
+      --color-text: #333333;
+      /* Измените здесь другие переменные цвета */
+    }
+}
+
 body {
+    background-color: var(--color-background);
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,9 +30,10 @@ input[type="text"] {
     margin-top: 10px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid #cccccc;
     border-radius: 4px;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
+    color: #333333;
     font-size: 16px;
     transition: 0.3s;
 }
