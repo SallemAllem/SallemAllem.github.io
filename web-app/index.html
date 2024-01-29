@@ -154,8 +154,7 @@ document.querySelector('input[type="number"]').addEventListener('input', functio
 
 
 
-let tg = window.Telegram.WebApp;
-tg.MainButton.text = "send";
+// let tg = window.Telegram.WebApp;
 
 document.getElementById('submitForm').addEventListener('click', function() {
     var products = document.getElementsByClassName('product');
@@ -171,10 +170,7 @@ document.getElementById('submitForm').addEventListener('click', function() {
         }
     }
 
-    Telegram.WebApp.onEvent('mainButtonClicked', function(){
-      tg.sendData(data); 
-      //при клике на основную кнопку отправляем данные в строковом виде
-   });
+    Telegram.WebApp.sendData(data)
     console.log(data); // Для отладки, показывает объект data в консоли
 });
     </script>
