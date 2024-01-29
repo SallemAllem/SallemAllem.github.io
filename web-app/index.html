@@ -251,6 +251,7 @@ document.getElementById('submitForm').addEventListener('click', function() {
 
    tg.MainButton.text = "Changed Text"; //изменяем текст кнопки 
    tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
+   tg.MainButton.show()
    tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
    tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
    tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
@@ -278,8 +279,11 @@ document.getElementById('submitForm').addEventListener('click', function() {
       }
    });
 
+   data = {
+    'data': 'data',
+   }
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
-      tg.sendData("some string that we need to send"); 
+      tg.sendData(data); 
       //при клике на основную кнопку отправляем данные в строковом виде
    });
 
