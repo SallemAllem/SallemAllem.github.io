@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <title>Форма заказа</title>
 </head>
 <body>
@@ -36,88 +37,48 @@
     <div class="podguz prodPodType">
         <div class="product">
             <img src="./товары/мамаЗнает_newBorn.png" width="50" height="50">
+            <div class="prodName">Baybee XXL</div>
             <button class="add">Добавить</button>
             <div class="quantity" style="display: none;">
               <button class="decrease">-</button>
-              <input type="number" value="1">
-              <button class="increase">+</button>
-            </div>
-        </div>
-
-        <div class="product">
-            <img src="./товары/мамаЗнает_newBorn.png" width="50" height="50">
-            <button class="add">Добавить</button>
-            <div class="quantity" style="display: none;">
-              <button class="decrease">-</button>
-              <input type="number" value="1">
+              <input type="number" value="0">
               <button class="increase">+</button>
             </div>
         </div>
         <div class="product">
             <img src="./товары/мамаЗнает_newBorn.png" width="50" height="50">
+            <div class="prodName">Baybee XL</div>
             <button class="add">Добавить</button>
             <div class="quantity" style="display: none;">
               <button class="decrease">-</button>
-              <input type="number" value="1">
+              <input type="number" value="0">
               <button class="increase">+</button>
             </div>
         </div>
         <div class="product">
             <img src="./товары/мамаЗнает_newBorn.png" width="50" height="50">
+            <div class="prodName">Baybee L</div>
             <button class="add">Добавить</button>
             <div class="quantity" style="display: none;">
               <button class="decrease">-</button>
-              <input type="number" value="1">
+              <input type="number" value="0">
               <button class="increase">+</button>
             </div>
         </div>
         <div class="product">
             <img src="./товары/мамаЗнает_newBorn.png" width="50" height="50">
+            <div class="prodName">Baybee M</div>
             <button class="add">Добавить</button>
             <div class="quantity" style="display: none;">
               <button class="decrease">-</button>
-              <input type="number" value="1">
-              <button class="increase">+</button>
-            </div>
-        </div>
-        <div class="product">
-            <img src="./товары/мамаЗнает_newBorn.png" width="50" height="50">
-            <button class="add">Добавить</button>
-            <div class="quantity" style="display: none;">
-              <button class="decrease">-</button>
-              <input type="number" value="1">
-              <button class="increase">+</button>
-            </div>
-        </div>
-        <div class="product">
-            <img src="./товары/мамаЗнает_newBorn.png" width="50" height="50">
-            <button class="add">Добавить</button>
-            <div class="quantity" style="display: none;">
-              <button class="decrease">-</button>
-              <input type="number" value="1">
-              <button class="increase">+</button>
-            </div>
-        </div>
-        <div class="product">
-            <img src="./товары/мамаЗнает_newBorn.png" width="50" height="50">
-            <button class="add">Добавить</button>
-            <div class="quantity" style="display: none;">
-              <button class="decrease">-</button>
-              <input type="number" value="1">
-              <button class="increase">+</button>
-            </div>
-        </div>
-        <div class="product">
-            <img src="./товары/мамаЗнает_newBorn.png" width="50" height="50">
-            <button class="add">Добавить</button>
-            <div class="quantity" style="display: none;">
-              <button class="decrease">-</button>
-              <input type="number" value="1">
+              <input type="number" value="0">
               <button class="increase">+</button>
             </div>
         </div>
     </div>
 </div>
+
+<button id="submitForm">Отправить</button>
 
 
 <script>
@@ -160,6 +121,7 @@ products.forEach(function(product) {
   addButton.addEventListener('click', function() {
     addButton.style.display = 'none';
     quantityDiv.style.display = 'block';
+    quantityInput.value = 1
   });
 
   decreaseButton.addEventListener('click', function() {
@@ -184,6 +146,32 @@ products.forEach(function(product) {
 
 document.querySelector('input[type="number"]').addEventListener('input', function (e) {
     this.style.width = ((this.value.length + 1) * 8 + 16) + 'px';
+});
+
+
+
+
+
+
+
+let tg = window.Telegram.WebApp;
+
+document.getElementById('submitForm').addEventListener('click', function() {
+    var products = document.getElementsByClassName('product');
+    var data = {};
+
+    for (var i = 0; i < products.length; i++) {
+        var prodName = products[i].querySelector('.prodName').textContent;
+        var quantityInput = products[i].querySelector('input[type="number"]');
+        var quantity = quantityInput ? quantityInput.value : 0;
+
+        if (quantity != 0) {
+            data[prodName] = parseInt(quantity);
+        }
+    }
+
+    tg.sendData(data);
+    console.log(data); // Для отладки, показывает объект data в консоли
 });
     </script>
     

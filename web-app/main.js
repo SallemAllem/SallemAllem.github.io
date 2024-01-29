@@ -26,4 +26,3 @@ button2.addEventListener('click', () => {
       container2.style.maxHeight = container2.scrollHeight + 'px';
     }
   });
-
