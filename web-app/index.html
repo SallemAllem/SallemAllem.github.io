@@ -282,8 +282,9 @@ document.getElementById('submitForm').addEventListener('click', function() {
    data = {
     'data': 'data',
    }
+   data_json = JSON.stringify(data)
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
-      tg.sendData(data); 
+      tg.sendData(data_json); 
       //при клике на основную кнопку отправляем данные в строковом виде
    });
 
