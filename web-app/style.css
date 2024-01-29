@@ -119,8 +119,9 @@ input[type="text"]:focus {
 }
 
 .prodPodType {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 10px; */
 }
 
 .products {
@@ -132,7 +133,7 @@ input[type="text"]:focus {
     flex-direction: column;
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 200px;
     text-align: center;
     justify-content: center;
