@@ -636,6 +636,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
     if (isFormValid()) {
         var products = document.getElementsByClassName('product');
         var data = {};
+        var prods = {};
 
         for (var i = 0; i < products.length; i++) {
             var prodName = products[i].querySelector('.prodName').textContent;
@@ -643,9 +644,16 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
             var quantity = quantityInput ? quantityInput.value : 0;
 
             if (quantity != 0) {
-                data[prodName] = parseInt(quantity);
+                prods[prodName] = parseInt(quantity);
             }
         }
+
+        data["товары"] = prods
+        data["имя получателя"] = document.getElementById('receiverName').value;
+        data["телефон получателя"] = document.getElementById('receiverTel').value;
+        data["адрес доставки"] = document.getElementById('deliveryAddress').value;
+        var selectedDeliveryRadio = document.querySelector('input[name="delivery"]:checked');
+        data["доставка"] = document.querySelector('label[for="' + selectedDeliveryRadio.id + '"]').textContent
 
         var data_json = JSON.stringify(data);
         tg.sendData(data_json);
@@ -659,6 +667,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
     var receiverName = document.getElementById('receiverName').value;
     var receiverTel = document.getElementById('receiverTel').value;
     var deliveryAddress = document.getElementById('deliveryAddress').value;
+    
     var selectedDeliveryRadio = document.querySelector('input[name="delivery"]:checked');
     var deliveryDate = document.getElementById('myDate').value;
 
@@ -706,7 +715,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
     var formText = 'Имя получателя: ' + receiverName + '<br>' +
                    'Телефон получателя: ' + receiverTel + '<br>' +
                    'Адрес доставки: ' + deliveryAddress + '<br>' +
-                   'Способ доставки: ' + deliveryMethod + '<br>' +
+                   'доставка: ' + deliveryMethod + '<br>' +
                    'Дата доставки: ' + deliveryDate + '<br>' +
                    'Выбранные товары:<br>' + selectedProducts;
 
