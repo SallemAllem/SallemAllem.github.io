@@ -105,7 +105,7 @@ input[type="text"]:focus {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.6); /* Более темный фон */
-    display: flex;
+    /* display: flex; */
     align-items: center; /* Выравнивание по вертикали */
     justify-content: center; /* Выравнивание по горизонтали */
 }
