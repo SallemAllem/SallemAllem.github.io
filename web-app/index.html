@@ -652,6 +652,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
         data["имя получателя"] = document.getElementById('receiverName').value;
         data["телефон получателя"] = document.getElementById('receiverTel').value;
         data["адрес доставки"] = document.getElementById('deliveryAddress').value;
+        data["дата доставки"] = document.getElementById('myDate').value;
         var selectedDeliveryRadio = document.querySelector('input[name="delivery"]:checked');
         data["доставка"] = document.querySelector('label[for="' + selectedDeliveryRadio.id + '"]').textContent
 
