@@ -75,7 +75,7 @@ input[type="text"]:focus {
     margin-bottom: 20px;
 }
 
-#myModal {
+/* #myModal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -94,7 +94,31 @@ input[type="text"]:focus {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+} */
+#myModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Более темный фон */
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Выравнивание по горизонтали */
 }
+
+#modalContent {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Опционально: можно добавить тень для лучшего визуального эффекта */
+    max-width: 500px; /* Ограничение максимальной ширины */
+}
+
 
 
 .brandName {

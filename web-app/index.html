@@ -650,7 +650,9 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
         var data_json = JSON.stringify(data);
         tg.sendData(data_json);
     } else {
-        alert("Пожалуйста, заполните все обязательные поля.");
+        // alert("Пожалуйста, заполните все обязательные поля.");
+        document.getElementById("modalText").innerHTML = "Пожалуйста, заполните все обязательные поля.";
+        modal.style.display = "block";
     }
 });
    function isFormValid() {
