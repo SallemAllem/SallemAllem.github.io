@@ -565,7 +565,7 @@
         
         if (inputDate < now || inputDate > weekLater) {
             document.getElementById("modalText").innerHTML = "Пожалуйста, выберите дату в пределах одной недели.";
-            modal.style.display = "block";
+            modal.style.display = "flex";
             this.value = '';
         }
     });
@@ -652,7 +652,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
     } else {
         // alert("Пожалуйста, заполните все обязательные поля.");
         document.getElementById("modalText").innerHTML = "Пожалуйста, заполните все обязательные поля.";
-        modal.style.display = "block";
+        modal.style.display = "flex";
     }
 });
    function isFormValid() {
