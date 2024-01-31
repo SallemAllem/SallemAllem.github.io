@@ -142,6 +142,11 @@ input[type="text"]:focus {
     overflow: hidden;
     transition: max-height .3s ease;
 }
+.MommyBabyContainer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}
 
 
 

@@ -7,20 +7,20 @@
     <title>Форма заказа</title>
 </head>
 <body>
-    <input type="text" id="receiverName" placeholder="Имя получателя">
-    <input type="text" id="receiverTel" placeholder="Телефон получателя">
-    <input type="text" id="deliveryAddress" placeholder="Адрес доставки">
+    <input type="text" id="receiverName" placeholder="Имя получателя" required>
+    <input type="text" id="receiverTel" placeholder="Телефон получателя" required>
+    <input type="text" id="deliveryAddress" placeholder="Адрес доставки" required>
     <div class="delivery">
-        <input class="deliveryClass" type="radio" id="cityDelivery" name="delivery" value="city">
+        <input class="deliveryClass" type="radio" id="cityDelivery" name="delivery" value="city" required>
         <label for="cityDelivery">Доставка по городу</label>
-        <input class="deliveryClass" type="radio" id="regionDelivery" name="delivery" value="region">
+        <input class="deliveryClass" type="radio" id="regionDelivery" name="delivery" value="region" required>
         <label for="regionDelivery">Доставка в регион</label>
     </div>
 
     <h4>Выбор даты доставки:</h4>
 <p>Выберите дату в пределах одной недели:</p>
 
-<input type="date" id="myDate" class="dateClass">
+<input type="date" id="myDate" class="dateClass" required>
 
 <div id="myModal">
   <div id="modalContent">
@@ -321,6 +321,135 @@
 </div>
 
 
+<div class="brandName" onclick="showAndHide('MommyBabyContainer')">Mommy Baby</div>
+<div class="MommyBabyContainer products">
+    <div class="prodType"><p>подгузники:</p></div>
+
+    <div class="podguz prodPodType">
+        <div class="product">
+            <img src="./товары/подгузники/MommyBaby/2.png" width="50" height="50">
+            <div class="prodName">Mommy Baby 2 | 4-8 кг | 56 шт</div>
+            <button class="add">Добавить</button>
+            <div class="quantity" style="display: none;">
+              <button class="decrease">-</button>
+              <input type="number" value="0">
+              <button class="increase">+</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="./товары/подгузники/MommyBaby/3.png" width="50" height="50">
+            <div class="prodName">Mommy Baby 3 | 6-11 кг | 48 шт</div>
+            <button class="add">Добавить</button>
+            <div class="quantity" style="display: none;">
+              <button class="decrease">-</button>
+              <input type="number" value="0">
+              <button class="increase">+</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="./товары/подгузники/MommyBaby/4.png" width="50" height="50">
+            <div class="prodName">Mommy Baby 4 | 9-14 кг | 44 шт</div>
+            <button class="add">Добавить</button>
+            <div class="quantity" style="display: none;">
+              <button class="decrease">-</button>
+              <input type="number" value="0">
+              <button class="increase">+</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="./товары/подгузники/MommyBaby/5.png" width="50" height="50">
+            <div class="prodName">Mommy Baby 5 | 12-18 кг | 40 шт</div>
+            <button class="add">Добавить</button>
+            <div class="quantity" style="display: none;">
+              <button class="decrease">-</button>
+              <input type="number" value="0">
+              <button class="increase">+</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="./товары/подгузники/MommyBaby/6.png" width="50" height="50">
+            <div class="prodName">Mommy Baby 6 | 13-23 кг | 36 шт</div>
+            <button class="add">Добавить</button>
+            <div class="quantity" style="display: none;">
+              <button class="decrease">-</button>
+              <input type="number" value="0">
+              <button class="increase">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="prodType"><p>трусики:</p></div>
+        
+    <div class="trusiki prodPodType">
+        <div class="product">
+            <img src="./товары/трусики/MommyBaby/3.png" width="50" height="50">
+            <div class="prodName">Mommy Baby 3 | 6-11 кг | 44 шт</div>
+            <button class="add">Добавить</button>
+            <div class="quantity" style="display: none;">
+              <button class="decrease">-</button>
+              <input type="number" value="0">
+              <button class="increase">+</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="./товары/трусики/MommyBaby/4.png" width="50" height="50">
+            <div class="prodName">Mommy Baby 4 | 9-15 кг | 42 шт</div>
+            <button class="add">Добавить</button>
+            <div class="quantity" style="display: none;">
+              <button class="decrease">-</button>
+              <input type="number" value="0">
+              <button class="increase">+</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="./товары/трусики/MommyBaby/5.png" width="50" height="50">
+            <div class="prodName">Mommy Baby 5 | 12-19 кг | 40 шт</div>
+            <button class="add">Добавить</button>
+            <div class="quantity" style="display: none;">
+              <button class="decrease">-</button>
+              <input type="number" value="0">
+              <button class="increase">+</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="./товары/трусики/MommyBaby/6.png" width="50" height="50">
+            <div class="prodName">Mommy Baby 6 | 13-24 кг | 38 шт</div>
+            <button class="add">Добавить</button>
+            <div class="quantity" style="display: none;">
+              <button class="decrease">-</button>
+              <input type="number" value="0">
+              <button class="increase">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="prodType"><p>салфетки:</p></div>
+
+    <div class="salfetki prodPodType">
+        <div class="product">
+            <img src="./товары/салфетки/MommyBaby_36.png" width="50" height="50">
+            <div class="prodName">Mommy Baby 36 шт</div>
+            <button class="add">Добавить</button>
+            <div class="quantity" style="display: none;">
+              <button class="decrease">-</button>
+              <input type="number" value="0">
+              <button class="increase">+</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="./товары/салфетки/MommyBaby_80.png" width="50" height="50">
+            <div class="prodName">Mommy Baby 80 шт</div>
+            <button class="add">Добавить</button>
+            <div class="quantity" style="display: none;">
+              <button class="decrease">-</button>
+              <input type="number" value="0">
+              <button class="increase">+</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script>
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
@@ -336,6 +465,7 @@
         if (inputDate < now || inputDate > weekLater) {
             document.getElementById("modalText").innerHTML = "Пожалуйста, выберите дату в пределах одной недели.";
             modal.style.display = "block";
+            this.value = '';
         }
     });
     
