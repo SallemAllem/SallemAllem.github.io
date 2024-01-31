@@ -598,8 +598,12 @@ products.forEach(function(product) {
   decreaseButton.addEventListener('click', function() {
     var quantity = parseInt(quantityInput.value);
     if (quantity > 1) {
-      quantityInput.value = quantity - 1;
-    }
+            quantityInput.value = quantity - 1;
+        } else if (quantity === 1) {
+            quantityInput.value = 0;
+            quantityDiv.style.display = 'none';
+            addButton.style.display = 'block';
+        }
   });
 
   increaseButton.addEventListener('click', function() {
