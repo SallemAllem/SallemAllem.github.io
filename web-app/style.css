@@ -147,6 +147,16 @@ input[type="text"]:focus {
     overflow: hidden;
     transition: max-height .3s ease;
 }
+.SaikoContainer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}
+.evaContainer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}
 
 
 
