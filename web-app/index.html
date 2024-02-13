@@ -10,6 +10,7 @@
     <input type="text" id="receiverName" placeholder="Имя получателя" required>
     <input type="text" id="receiverTel" placeholder="Телефон получателя" required>
     <input type="text" id="deliveryAddress" placeholder="Адрес доставки" required>
+    <input type="text" id="comments" placeholder="комментарии к заявке" style="resize: vertical;">
     <div class="delivery">
         <input class="deliveryClass" type="radio" id="cityDelivery" name="delivery" value="city" required>
         <label for="cityDelivery">Доставка по городу</label>
@@ -466,7 +467,7 @@
         </div>
     </div>
 
-    <div class="prodType"><p>ночные:</p></div>
+    <div class="prodType"><p>ежедневные:</p></div>
 
     <div class="nochnye prodPodType">
         <div class="product">
@@ -514,7 +515,7 @@
         </div>
     </div>
 
-    <div class="prodType"><p>ночные:</p></div>
+    <div class="prodType"><p>ежедневные</p></div>
 
     <div class="nochnye prodPodType">
         <div class="product">
@@ -656,6 +657,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
         data["имя получателя"] = document.getElementById('receiverName').value;
         data["телефон получателя"] = document.getElementById('receiverTel').value;
         data["адрес доставки"] = document.getElementById('deliveryAddress').value;
+        data["комментарии к заявке"] = document.getElementById('comments').value;
         data["дата доставки"] = document.getElementById('myDate').value;
         var selectedDeliveryRadio = document.querySelector('input[name="delivery"]:checked');
         data["доставка"] = document.querySelector('label[for="' + selectedDeliveryRadio.id + '"]').textContent
@@ -697,6 +699,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
    function updateFormText() {
     var receiverName = document.getElementById('receiverName').value;
     var receiverTel = document.getElementById('receiverTel').value;
+    var comments = document.getElementById('comments').value;
     var deliveryAddress = document.getElementById('deliveryAddress').value;
 
     // Находим выбранную радио-кнопку
@@ -720,6 +723,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
     var formText = 'Имя получателя: ' + receiverName + '<br>' +
                    'Телефон получателя: ' + receiverTel + '<br>' +
                    'Адрес доставки: ' + deliveryAddress + '<br>' +
+                   'Комментарии к заявке: ' + comments + '<br>' +
                    'доставка: ' + deliveryMethod + '<br>' +
                    'Дата доставки: ' + deliveryDate + '<br>' +
                    'Выбранные товары:<br>' + selectedProducts;
@@ -731,6 +735,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
 // Добавляем обработчики событий на поля формы
 document.getElementById('receiverName').addEventListener('input', updateFormText);
 document.getElementById('receiverTel').addEventListener('input', updateFormText);
+document.getElementById('comments').addEventListener('input', updateFormText);
 document.getElementById('deliveryAddress').addEventListener('input', updateFormText);
 document.querySelectorAll('input[name="delivery"]').forEach(function(radio) {
     radio.addEventListener('change', updateFormText);
