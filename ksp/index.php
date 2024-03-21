@@ -13,5 +13,6 @@
         <div id="responseBlock"></div>
     </div>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
