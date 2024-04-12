@@ -1,4 +1,7 @@
 <?php
+header("Access-Control-Allow-Origin: *"); header("Access-Control-Allow-Headers: *"); 
+// header("X-Auth-Token: y/fBA4slsti4mDq5G7m0Ok7CXY3qBxy8O30lSb2nnfE=");
+
 
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     $token = "y/fBA4slsti4mDq5G7m0Ok7CXY3qBxy8O30lSb2nnfE=";
@@ -10,7 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
     $options = array(
         'http' => array(
-            'header' => "Authorization: Bearer " . $token
+            // 'header' => "Authorization: Bearer " . $token
+            'header' => "X-Auth-Token: y/fBA4slsti4mDq5G7m0Ok7CXY3qBxy8O30lSb2nnfE="
         )
     );
     $context = stream_context_create($options);
